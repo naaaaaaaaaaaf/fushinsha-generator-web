@@ -27,7 +27,7 @@ export default class App extends Component {
         const data = results.data; // APIレスポンスを取得する
         this.setState({
           api_data: data,
-          mastoshare_link: "https://mastoshare.net/post.php?text=" + data.message + " %23不審者ジェネレーター https://auri.ga/fushinsha&ref=no"
+          mastoshare_link: "https://mastoshare.net/post.php?text=" + data.message + " \n%23不審者ジェネレーター https://auri.ga/fushinsha&ref=no"
         });
       },
       )
@@ -78,9 +78,12 @@ export default class App extends Component {
             client='ca-pub-3761835579827953'
             slot='1039188699'
           />
-          <div className="text-center mt-3">
-            <h3>20分間隔で投稿するBot</h3>
-            <iframe allowfullscreen sandbox="allow-top-navigation allow-scripts" width="80%" height="500" src="https://www.mastofeed.com/apiv2/feed?userurl=https%3A%2F%2Fap.ketsuben.red%2Fusers%2Fmecha_fushinsha_bot&theme=light&size=100&header=true&replies=false&boosts=false"></iframe>
+          <div className="mt-3">
+            <div class="mastodon_design">
+            <div class="ns-container">
+            <ins data-title="20分間隔で投稿するBot" data-acct="mecha_fushinsha_bot@ap.ketsuben.red" data-limit="30" data-nocss="1"></ins>
+            </div>
+            </div>
           </div>
         </Container>
       </div>
